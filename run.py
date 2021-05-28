@@ -11,10 +11,6 @@ def home():
     return render_template("index.html")
 
 
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0')
-
-
 @app.route('/help')
 def help():
     return "HELP ME!!!"
@@ -22,11 +18,10 @@ def help():
 
 @app.route('/contact')
 def contact():
-    return "Contact with me: filipsadurski3@gmail.com"
+    return "<a href=mailto:filipsadurski3@gmail.com>"
 
 
 @app.route('/user/<username>', methods=['GET', 'POST'])
-
 
 def show_user_profile(username):
     if request.method == 'POST':
@@ -36,7 +31,6 @@ def show_user_profile(username):
 
 
 @app.route("/error_denied")
-
 
 def error_denied():
     abort(401)
@@ -64,10 +58,18 @@ def not_found_error(error):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
-        return request.form["username"] + " " + request.form["password"]
+        return request.form["username"] + "+" + request.form["password"]
     else:
         return render_template("login.html")
 
+@app.route('/about')
+def about():
+        return render_template("about.html")
+    
+
+@app.route('/gallery')
+def gallery():
+    return render_template("galerry.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
