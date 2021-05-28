@@ -27,7 +27,6 @@ def contact():
 
 @app.route('/user/<username>', methods=['GET', 'POST'])
 
-
 def show_user_profile(username):
     if request.method == 'POST':
         return 'HTTP POST for user %s with password %s' %(username, request.form['password'])
@@ -36,7 +35,6 @@ def show_user_profile(username):
 
 
 @app.route("/error_denied")
-
 
 def error_denied():
     abort(401)
@@ -64,7 +62,7 @@ def not_found_error(error):
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
-        return request.form["username"] + " " + request.form["password"]
+        return request.form["username"] + "+" + request.form["password"]
     else:
         return render_template("login.html")
 
