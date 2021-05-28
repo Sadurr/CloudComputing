@@ -22,7 +22,8 @@ def help():
 
 @app.route('/contact')
 def contact():
-    return "Contact with me: filipsadurski3@gmail.com"
+#  return "Contact with me: filipsadurski3@gmail.com"
+    return "<a href=mailto:filipsadurski3@gmail.com>"
 
 
 @app.route('/user/<username>', methods=['GET', 'POST'])
