@@ -15,10 +15,11 @@
   <a href="https://sadurskifilip.azurewebsites.net/login">Login</a>
   <a href="https://sadurskifilip.azurewebsites.net/help">Help</a>
 
-  <img src="cat.jpg" alt="Cat"><br>
-  <img src="giraffe.jpg" alt="Giraffe"><br>
-  <img src="obraz.jpg" alt="Picture"><br>
-  <img src="time.jpg" alt="Time"><br>
+  <img src="{{ url_for('static',filename='cat.jpg')}}" alt="Cat"><br>
+  <img src="{{ url_for('static',filename='giraffe.jpg')}}" alt="Cat"><br>
+  <img src="{{ url_for('static',filename='picture.jpg')}}" alt="Cat"><br>
+  <img src="{{ url_for('static',filename='time.jpg')}}" alt="Cat"><br>
+
 
 </body>
 </html>
