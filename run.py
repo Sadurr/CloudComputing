@@ -18,7 +18,8 @@ def help():
 
 @app.route('/contact')
 def contact():
-    return "<a href=mailto:filipsadurski3@gmail.com>Send email</a>"
+    return render_template("about.html")
+    # return "<a href=mailto:filipsadurski3@gmail.com>Send email</a>"
     # return "contact with me filipsadurski3@gmail.com: "
 
 
