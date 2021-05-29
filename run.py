@@ -18,7 +18,7 @@ def help():
 
 @app.route('/contact')
 def contact():
-    return render_template("about.html")
+    return render_template("contact.html")
     # return "<a href=mailto:filipsadurski3@gmail.com>Send email</a>"
     # return "contact with me filipsadurski3@gmail.com: "
 
@@ -71,7 +71,7 @@ def about():
 
 @app.route('/gallery')
 def gallery():
-    return render_template("galerry.html")
+    return render_template("gallery.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
