@@ -4,7 +4,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Galerry</title>
+    <title>Gallery</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -15,10 +16,63 @@
   <a href="https://sadurskifilip.azurewebsites.net/login">Login</a>
   <a href="https://sadurskifilip.azurewebsites.net/help">Help</a>
 
-  <img src="{{ url_for('static',filename='giraffe.jpg')}}" alt="Giraffe"><br>
-  <img src="{{ url_for('static',filename='obraz.jpg')}}" alt="Picture"><br>
-  <img src="{{ url_for('static',filename='time.jpg')}}" alt="Time"><br>
-  <img src="{{ url_for('static',filename='cat.jpg')}}" alt="Cat"><br>
+
+	<div class="photos" style="text-align:center; width:800px; margin-left:auto; margin-right:auto;">
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr style="background-color:grey">
+	</tr>
+	<tr width="798" border="0" cellspacing="12">
+		<td  height="625" style="background-color: #A9A9A9">
+		<table>
+		<tr>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+		</tr>
+		<tr>
+			<td>Photo 1</td>
+			<td>Photo 2</td>
+			<td>Photo 3</td>
+		</tr>
+		<tr>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+		</tr>
+		<tr>
+			<td>Photo 4</td>
+			<td>Photo 5</td>
+			<td>Photo 6</td>
+		</tr>
+            <tr>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+			<td>
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" width="250" height="188"></a></td>
+		</tr>
+		<tr>
+			<td>Photo 7</td>
+			<td>Photo 8</td>
+			<td>Photo 9</td>
+		</tr>
+		</table></td>
+		</tr>
+	</table>
+</div>
+
+<!--  <div class="row">-->
+<!--    <div class="col-sm-3"> <img src="{{ url_for('static',filename='giraffe.jpg')}}" alt="Giraffe"> <br> </div>-->
+<!--    <div class="col-sm-3">  <img src="{{ url_for('static',filename='obraz.jpg')}}" alt="Picture"><br> </div>-->
+<!--    <div class="col-sm-3"> <img src="{{ url_for('static',filename='giraffe.jpg')}}" alt="Giraffe"> <br> </div>-->
+<!-- </div>-->
 
 
 </body>
