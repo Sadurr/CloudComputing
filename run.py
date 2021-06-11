@@ -3,12 +3,8 @@ from flask import request
 from flask import render_template
 from flask import abort, redirect, url_for, make_response
 
-import jinja2
-
-jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('template'))
-template = jinja_env.get_template('index.html')
-
 app = Flask(__name__)
+
 
 @app.route('/')
 def home():
