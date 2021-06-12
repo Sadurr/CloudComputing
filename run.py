@@ -2,8 +2,28 @@ from flask import Flask
 from flask import request
 from flask import render_template
 from flask import abort, redirect, url_for, make_response
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
+
+mail = Mail(app)
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'yourId@gmail.com'
+app.config['MAIL_PASSWORD'] = '*****'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
+
+
+@app.route("/mail")
+def index():
+    msg = Message('Hello', sender='yourId@gmail.com', recipients=['someone1@gmail.com'])
+    msg.body = "Hello Flask message sent from Flask-Mail"
+    mail.send(msg)
+    return "Sent"
+
 
 
 @app.route('/')
