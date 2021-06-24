@@ -1,0 +1,38 @@
+body
+{
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+}
+
+.carousel-indicators
+{
+    margin-top: 50px;
+}
+
+td
+{
+    overflow: hidden;
+    padding: 0;
+    border:1px solid #000;
+}
+
+td img
+{
+    transition: 3s;
+    margin: 0 auto;
+    display: block;
+}
+
+td img:hover
+{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    z-index: 0;
+}
